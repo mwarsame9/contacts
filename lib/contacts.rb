@@ -23,4 +23,14 @@ class Contact
     @@all_contacts = []
   end
 
+  def Contact.find(identification)
+    found_contact = nil
+    @@all_contacts.each() do |contact|
+      if contact.id().eql?(identification.to_i())
+        found_contact = contact
+      end
+    end
+    found_contact
+  end
+
 end

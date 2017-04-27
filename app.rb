@@ -19,6 +19,7 @@ end
    erb :new_contact_form
  end
 
-get('/contact_details') do
+get('/contact_details/:id') do
+  @contact = Contact.find(params.fetch('id').to_i())
   erb :contact_details
 end

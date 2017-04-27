@@ -1,7 +1,7 @@
 <h1>Contact Tracker</h1>
 <ul>
   <% @contacts.each() do |contact| %>
-    <li><a href="/contact_details/"><%= contact.first_name() %> <%= contact.last_name() %></a></li>
+    <li><a href="/contact_details/<%= contact.id() %>"><%= contact.first_name() %> <%= contact.last_name() %></a></li>
     <% end %>
 </ul>
 <a href="/new_contact">Add a contact</a>
