@@ -10,6 +10,9 @@ class Address
     @zip = attributes.fetch(:zip)
     @type = attributes.fetch(:type)
     @id = @@all_addresses.length().+(1)
+  end
 
+  def Address.all
+    @@all_addresses
   end
 end

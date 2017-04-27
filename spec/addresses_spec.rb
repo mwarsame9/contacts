@@ -38,5 +38,9 @@ describe(Address) do
     end
   end
 
-
+  describe('.all') do
+    it('returns an empty array') do
+      expect(Address.all()).to(eq([]))
+    end
+  end
 end
