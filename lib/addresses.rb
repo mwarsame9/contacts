@@ -19,4 +19,8 @@ class Address
   def save
     @@all_addresses.push(self)
   end
+
+  def Address.clear
+    @@all_addresses=[]
+  end
 end

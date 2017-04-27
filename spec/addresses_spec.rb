@@ -50,4 +50,10 @@ describe(Address) do
       expect(test_address.save()).to(eq([test_address]))
     end
   end
+
+  describe('.clear') do
+    it('clears all addresses from array') do
+      expect(Address.clear()).to(eq([]))
+    end
+  end
 end
