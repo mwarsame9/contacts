@@ -15,4 +15,8 @@ class Address
   def Address.all
     @@all_addresses
   end
+
+  def save
+    @@all_addresses.push(self)
+  end
 end
