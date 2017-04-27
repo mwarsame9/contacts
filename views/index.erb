@@ -1,0 +1,6 @@
+<h1>Contact Tracker</h1>
+<ul>
+  <% @contacts.each() do |inputted_contact| %>
+    <li><%= inputted_contact.first_name() %></li>
+    <% end %> 
+<a href="/new_contact">Add a contact</a>
