@@ -1,6 +1,6 @@
 class Address
 
-  attr_accessor(:street)
+  attr_accessor(:street, :city, :state, :zip, :type)
   @@all_addresses = []
 
   def initialize(attributes)
