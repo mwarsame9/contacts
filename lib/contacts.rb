@@ -1,5 +1,5 @@
 class Contact
-  attr_accessor(:first_name, :last_name, :job_title)
+  attr_accessor(:first_name, :last_name, :job_title, :company)
 
   define_method(:initialize) do |attributes|
     @first_name = attributes.fetch(:first_name)

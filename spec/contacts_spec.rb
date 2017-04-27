@@ -21,6 +21,12 @@ describe(Contact) do
       expect(test_contact.job_title()).to(eq("president"))
     end
   end
+  describe('#company') do
+    it("returns the company of the contact") do
+      test_contact = Contact.new(:first_name => "John", :last_name => "Doe", :job_title => "president", :company => "Epicodus")
+      expect(test_contact.company()).to(eq("Epicodus"))
+    end
+  end
 
 
 
