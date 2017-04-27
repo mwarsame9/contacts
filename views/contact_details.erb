@@ -1,7 +1,18 @@
-<h1><%= @contact.first_name() %></h1>
-<h1><%= @contact.last_name() %></h1>
-<h1><%= @contact.job_title() %></h1>
-<h1><%= @contact.company() %></h1>
+<h1><%= @contact.first_name() %> <%= @contact.last_name() %></h1>
 
+<h2>Title: <%= @contact.job_title() %></h2>
+<h2>Company: <%= @contact.company() %></h2>
+
+<ul>
+  <% @addresses.each() do |address| %>
+    <li> <%= address.street() %> <%= address.city() %></li>
+    <% end %>
+</ul>
+
+
+<a href="/new_address">Add address</a>
+<a href="/new_email">Add email</a>
+<a href="/new_phone">Add phone number</a>
+<br>
 <a href="/">Contact list</a>
 <a href="/new_contact">Add a contact</a>

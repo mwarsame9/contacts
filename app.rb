@@ -21,5 +21,21 @@ end
 
 get('/contact_details/:id') do
   @contact = Contact.find(params.fetch('id').to_i())
+  @addresses = Address.all
   erb :contact_details
+end
+
+get('/new_address') do
+  erb :new_address_form
+end
+
+# get('/contacts/:id/new_addresses/new') do
+#     @contact = Contact.find(params.fetch('id').to_i())
+#     erb(:new_contact_form)
+# end
+
+post('/new_address/add') do
+  @address = Address.new(:street => params.fetch('street'), :city => params.fetch('city'), :state => params.fetch('state'), :zip => params.fetch('zip'), :type => params.fetch('type'))
+  @address.save
+  erb :new_address_form
 end
