@@ -9,18 +9,21 @@ describe(Contact) do
       expect(test_contact.first_name()).to(eq("John"))
     end
   end
+
   describe('#last_name') do
     it("returns the last name of the contact") do
       test_contact = Contact.new(:first_name => "John", :last_name => "Doe", :job_title => "president", :company => "Epicodus")
       expect(test_contact.last_name()).to(eq("Doe"))
     end
   end
+
   describe('#job_title') do
     it("returns the job title of the contact") do
       test_contact = Contact.new(:first_name => "John", :last_name => "Doe", :job_title => "president", :company => "Epicodus")
       expect(test_contact.job_title()).to(eq("president"))
     end
   end
+
   describe('#company') do
     it("returns the company of the contact") do
       test_contact = Contact.new(:first_name => "John", :last_name => "Doe", :job_title => "president", :company => "Epicodus")
@@ -28,6 +31,11 @@ describe(Contact) do
     end
   end
 
+  describe('.all') do
+    it("returns an empty array to start") do
+      expect(Contact.all()).to(eq([]))
+    end
+  end
 
 
 
