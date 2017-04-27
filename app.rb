@@ -18,3 +18,7 @@ end
    redirect '/new_contact'
    erb :new_contact_form
  end
+
+get('/contact_details') do
+  erb :contact_details
+end

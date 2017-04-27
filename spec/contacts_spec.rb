@@ -45,4 +45,21 @@ describe(Contact) do
     end
   end
 
+  describe('.clear') do
+    it("empties out all contacts") do
+      test_contact = Contact.new(:first_name => "John", :last_name => "Doe", :job_title => "president", :company => "Epicodus")
+      Contact.clear()
+      expect(Contact.all).to(eq([]))
+    end
+  end
+
+
+  describe('#id') do
+    it("gives each new contact an id") do
+      test_contact = Contact.new(:first_name => "John", :last_name => "Doe", :job_title => "president", :company => "Epicodus")
+      test_contact.save
+      expect(test_contact.id).to(eq(1))
+    end
+  end
+
 end
