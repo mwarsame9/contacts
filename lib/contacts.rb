@@ -12,4 +12,8 @@ class Contact
   def Contact.all
     @@contacts
   end
+
+  def save
+    @@contacts.push(self)
+  end
 end
